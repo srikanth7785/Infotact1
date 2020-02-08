@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sample_project/Screens/ChatScreen.dart';
 import 'package:sample_project/Screens/map.dart';
 
 import 'SelectCat.dart';
@@ -19,6 +20,11 @@ class _HomeState extends State<Home> {
 
     return Scaffold(
         bottomNavigationBar: CurvedNavigationBar(
+          onTap: (i){
+            print(i);
+            if(i == 0)
+              Navigator.push(context, MaterialPageRoute(builder: (context) => ChatScreen()));
+          },
                           // color: const Color(0xff01346C),
           gradient: LinearGradient(
           begin: Alignment.centerLeft,
